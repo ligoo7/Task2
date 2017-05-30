@@ -217,7 +217,7 @@ int main()
 					break;
 				case 2:
 					FName = fileOut();
-					cont.printToFile(std::fstream(FName, std::ios::out));
+					subset.printToFile(std::fstream(FName, std::ios::out));
 					std::cout << "Сохранено\n\n";
 					break;
 				case 0:
