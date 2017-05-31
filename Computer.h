@@ -331,32 +331,40 @@ void editComputer(Computer &comp)
 
 	std::cout << "\nƒл€ отмены введите 'stop', дл€ пропуска пол€ - 'skip'\n";
 	std::cout << "\n¬ведите код(текущий = " + std::to_string(comp.code) + "): ";
-	ACode = getInt(1);
+	ACode = getInt(1, 999999, true);
 	if (ACode != -1) comp.code = ACode;
+
 	std::cout << "\n¬ведите название марки(текуща€ = " + comp.mark + "): ";
 	std::cin >> AMark;
 	if (AMark == "stop") throw "stop";
 	if (AMark != "skip")  comp.mark = AMark; 
+
 	std::cout << "\n¬ведите тип процессора(текущий = " + comp.processor + "): ";
 	std::cin >> Aprocessor;
 	if (Aprocessor == "stop") throw "stop";
 	if (Aprocessor != "skip") comp.processor = Aprocessor;
+
 	std::cout << "\n¬ведите частоту работы процессора(текуща€ = " + std::to_string(comp.frequency) + "): ";
-	Afrequency = getInt(1); 
+	Afrequency = getInt(1, 999999, true);
 	if (Afrequency != -1) comp.frequency = Afrequency;
+
 	std::cout << "\n¬ведите объем оперативной пам€ти(текущий = " + std::to_string(comp.RAM) + "): ";
-	ARAM = getInt(1); 
+	ARAM = getInt(1, 999999, true);
 	if (ARAM != -1) comp.RAM = ARAM;
+
 	std::cout << "\n¬ведите объем жесткого диска(текущий = " + std::to_string(comp.HDD) + "): ";
-	AHDD = getInt(1); 
+	AHDD = getInt(1, 999999, true);
 	if (AHDD != -1) comp.HDD = AHDD;
+
 	std::cout << "\n¬ведите объем пам€ти видеокарты(текущий = " + std::to_string(comp.VideoCard) + "): ";
-	 AVideoCard = getInt(1); 
+	 AVideoCard = getInt(1, 999999, true);
 	if (AVideoCard != -1) comp.VideoCard = AVideoCard;
+
 	std::cout << "\n¬ведите ценность(текуща€ = " + std::to_string(comp.value) + "): ";
-	Avalue = getInt(1); 
+	Avalue = getInt(1, 999999, true);
 	if (Avalue != -1) comp.value = Avalue;
+
 	std::cout << "\n¬ведите количество экземпл€ров(текущее = " + std::to_string(comp.count) + "): ";
-	ACount = getInt(1); 
+	ACount = getInt(1, 999999, true);
 	if (ACount != -1) comp.count = ACount;
 }

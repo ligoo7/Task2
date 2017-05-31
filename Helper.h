@@ -4,7 +4,7 @@
 #include <string>
 
 //получить число из указанного диапазона
-int getInt(int min = 0, int max = 999999)
+int getInt(int min = 0, int max = 999999, bool edit = false)
 {
 	std::string str;
 	int res; 
@@ -15,14 +15,14 @@ int getInt(int min = 0, int max = 999999)
 		{
 			std::cin >> str;
 			if (str == "stop") throw "stop";
-			if (str == "skip") return -1;
+			if (str == "skip" && edit) return -1;
 			res = std::stoi(str);
 			while (res < min || res > max)
 			{
 				std::cout << "Введите число от " << min << " до " << max << std::endl;
 				std::cin >> str;
 				if (str == "stop") throw "stop";
-				if (str == "skip") return -1;
+				if (str == "skip" && edit) return -1;
 				res = std::stoi(str);
 			}
 			return res;

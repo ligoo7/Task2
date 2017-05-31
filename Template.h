@@ -1,6 +1,5 @@
 #pragma once
-//2stop числом не считывает
-//cохранение подвектора
+
 template <class T>
 class Container
 {
@@ -48,8 +47,7 @@ public:
 
 	void add(T el)
 	{
-		if (!find(el))
-			vect.push_back(el);
+		vect.push_back(el);
 	}
 
 	void remove(iter &it) {
